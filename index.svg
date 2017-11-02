@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.1767767"
-     inkscape:cx="-46.453809"
-     inkscape:cy="99.743077"
+     inkscape:zoom="0.5"
+     inkscape:cx="-218.31872"
+     inkscape:cy="629.61493"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -87,7 +87,7 @@
      transform="translate(0,-47)">
     <g
        id="g4546"
-       transform="translate(-9.0000005,1.0000005)">
+       transform="translate(-4,131.5)">
       <rect
          style="stroke-width:0.16952461"
          y="46.500004"
@@ -112,7 +112,7 @@
     </g>
     <g
        id="g4650"
-       transform="translate(-1,28.000004)">
+       transform="rotate(90,134.50002,167.49997)">
       <rect
          y="49"
          x="115"
@@ -144,7 +144,7 @@
     </g>
     <g
        id="g4618"
-       transform="translate(-1,1.9073485e-6)">
+       transform="rotate(90,150.50003,183.49997)">
       <rect
          y="49"
          x="115"
@@ -177,38 +177,43 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="9.5990953"
-       y="56.988834"
+       x="37.599098"
+       y="207.48883"
        id="text3717"><tspan
          sodipodi:role="line"
          id="tspan3715"
-         x="9.5990953"
-         y="56.988834"
+         x="37.599098"
+         y="207.48883"
          style="font-size:4.23333311px;stroke-width:0.26458332">Roulement 6mm</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="224.04384"
-       y="60.983295"
-       id="text4622"><tspan
+       x="-128.88979"
+       y="272.78271"
+       id="text4622"
+       transform="rotate(-90)"
+       inkscape:transform-center-x="39.158333"
+       inkscape:transform-center-y="-60.325"><tspan
          sodipodi:role="line"
          id="tspan4620"
-         x="224.04384"
-         y="60.983295"
+         x="-128.88979"
+         y="272.78271"
          style="stroke-width:0.26458332">Moteur v1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="223.04384"
-       y="90.983299"
-       id="text4622-3"><tspan
+       x="-128.84845"
+       y="244.85013"
+       id="text4622-3"
+       transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan4620-6"
-         x="223.04384"
-         y="90.983299"
+         x="-128.84845"
+         y="244.85013"
          style="stroke-width:0.26458332">Moteur v2</tspan></text>
     <g
-       id="g4800">
+       id="g4800"
+       transform="translate(29.250001,20.999996)">
       <g
          transform="translate(-3.0000019,-164.5)"
          id="g4778">
@@ -3718,5 +3723,89 @@
         </g>
       </g>
     </g>
+    <g
+       id="g2952"
+       transform="translate(-8,-54.373367)">
+      <rect
+         ry="3.1183035"
+         style="fill:#800000;stroke-width:0.26458332"
+         y="-226.37337"
+         x="-167.5"
+         height="70"
+         width="15"
+         id="rect1854-0"
+         rx="3.1183035"
+         transform="scale(-1)" />
+      <rect
+         style="fill:#666666;fill-opacity:0.61224491;stroke-width:0.14100231"
+         ry="0"
+         y="-194.37337"
+         x="-172"
+         height="6"
+         width="24"
+         id="rect1872-6"
+         transform="scale(-1)" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,174.82175,-149.08807)"
+       id="g2862-6">
+      <g
+         id="g1852-6-2"
+         transform="matrix(1,0,0,-1,-404.47112,291.75434)">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1850-7-6"
+           d="m 458.00122,-91.561796 -4.27158,-4.311887 h -3.34812 v 2.704747 h -7.00008 v 5.000207 h 14.61978 z m 0,9.392694 h -14.61978 v 5.000214 h 7.00008 v 2.705262 h 3.24167 l 4.37803,-4.351671 z"
+           style="opacity:1;fill:#ffd884;fill-opacity:1;stroke:none;stroke-width:0.31495675;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke" />
+      </g>
+      <g
+         transform="matrix(0,-1,-1,0,-25.140506,841.33961)"
+         id="g2856-1">
+        <path
+           style="opacity:1;fill:#ffd884;fill-opacity:1;stroke:none;stroke-width:0.31495675;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+           d="m 458.00122,-91.561796 -4.27158,-4.311887 h -3.34812 v 2.704747 h -7.00008 v 5.000207 h 14.61978 z m 0,9.392694 h -14.61978 v 5.000214 h 7.00008 v 2.705262 h 3.24167 l 4.37803,-4.351671 z"
+           id="path2854-8"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <text
+       id="text2964"
+       y="74.33091"
+       x="54.862"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
+         y="74.33091"
+         x="54.862"
+         id="tspan2962"
+         sodipodi:role="line">Bloc roue </tspan><tspan
+         style="stroke-width:0.26458332"
+         y="87.560074"
+         x="54.862"
+         sodipodi:role="line"
+         id="tspan2966">codeuse</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-193.2317"
+       y="183.85014"
+       id="text2972"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         x="-193.2317"
+         y="183.85014"
+         style="stroke-width:0.26458332"
+         id="tspan2976">Roue d'entrainement</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="69.129723"
+       y="267.91971"
+       id="text2984"><tspan
+         id="tspan2982"
+         sodipodi:role="line"
+         x="69.129723"
+         y="267.91971"
+         style="stroke-width:0.26458332">Bloc renvoi d'angle</tspan></text>
   </g>
 </svg>
