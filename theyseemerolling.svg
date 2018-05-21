@@ -9,28 +9,29 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="300mm"
-   height="250mm"
-   viewBox="0 0 300 250"
+   width="2100mm"
+   height="400mm"
+   viewBox="0 0 2100 400"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="index.svg">
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="theyseemerolling.svg">
   <defs
      id="defs2">
     <marker
        inkscape:stockid="Arrow1Mstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mstart"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path5416"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
-         transform="scale(0.4) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         inkscape:connector-curvature="0" />
     </marker>
   </defs>
   <sodipodi:namedview
@@ -40,9 +41,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="1684.8909"
-     inkscape:cy="10.877023"
+     inkscape:zoom="0.5"
+     inkscape:cx="4886.7725"
+     inkscape:cy="1028.4226"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -91,7 +92,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -99,17 +100,17 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-47)">
+     transform="translate(0,103)">
     <rect
        style="fill:none;fill-opacity:1;stroke:#494949;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect5408"
        width="227"
        height="145.54375"
-       x="350.5"
-       y="200.95625" />
+       x="1486.5"
+       y="96.956261" />
     <g
        id="g4546"
-       transform="translate(-4,131.5)">
+       transform="translate(1132,27.5)">
       <rect
          style="stroke-width:0.16952461"
          y="46.500004"
@@ -134,7 +135,7 @@
     </g>
     <g
        id="g4650"
-       transform="rotate(90,134.50002,167.49997)">
+       transform="rotate(90,754.50001,683.49998)">
       <rect
          y="49"
          x="115"
@@ -166,7 +167,7 @@
     </g>
     <g
        id="g4618"
-       transform="rotate(90,150.50003,183.49997)">
+       transform="rotate(90,770.50002,699.49998)">
       <rect
          y="49"
          x="115"
@@ -199,43 +200,43 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="37.599098"
-       y="207.48883"
+       x="1173.5991"
+       y="103.48883"
        id="text3717"><tspan
          sodipodi:role="line"
          id="tspan3715"
-         x="37.599098"
-         y="207.48883"
+         x="1173.5991"
+         y="103.48883"
          style="font-size:4.23333311px;stroke-width:0.26458332">Roulement 6mm</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-128.88979"
-       y="272.78271"
+       x="-24.889786"
+       y="1408.7827"
        id="text4622"
        transform="rotate(-90)"
        inkscape:transform-center-x="39.158333"
        inkscape:transform-center-y="-60.325"><tspan
          sodipodi:role="line"
          id="tspan4620"
-         x="-128.88979"
-         y="272.78271"
+         x="-24.889786"
+         y="1408.7827"
          style="stroke-width:0.26458332">Moteur v1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-128.84845"
-       y="244.85013"
+       x="-24.84845"
+       y="1380.8501"
        id="text4622-3"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan4620-6"
-         x="-128.84845"
-         y="244.85013"
+         x="-24.84845"
+         y="1380.8501"
          style="stroke-width:0.26458332">Moteur v2</tspan></text>
     <g
        id="g4800"
-       transform="translate(29.250001,20.999996)">
+       transform="translate(1165.25,-83.000004)">
       <g
          transform="translate(-3.0000019,-164.5)"
          id="g4778">
@@ -272,7 +273,7 @@
          rx="3.1183035" />
     </g>
     <g
-       transform="matrix(0,1,1,0,51.683435,28.753248)"
+       transform="matrix(0,1,1,0,1187.6834,-75.246752)"
        id="g1668">
       <g
          id="g4843-5-5"
@@ -612,7 +613,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0,1,1,0,-178.83736,180.75322)"
+       transform="matrix(0,1,1,0,957.16264,76.753217)"
        id="g1610">
       <g
          id="g4843-4-6"
@@ -945,7 +946,7 @@
          y="51.246746" />
     </g>
     <g
-       transform="matrix(0,1,1,0,91.183437,180.25325)"
+       transform="matrix(0,1,1,0,1227.1834,76.25325)"
        id="g1726">
       <g
          id="g4843-52"
@@ -1286,7 +1287,7 @@
     </g>
     <g
        id="g1840"
-       transform="matrix(-1,0,0,1,110.22021,-223.87337)">
+       transform="matrix(-1,0,0,1,1246.2202,-327.87338)">
       <g
          id="g1847">
         <g
@@ -1649,7 +1650,7 @@
     </g>
     <g
        id="g1553"
-       transform="translate(-294.22897,54.373358)">
+       transform="translate(841.77103,-49.626642)">
       <g
          transform="translate(-732.00002,-255.99999)"
          id="g5131-1">
@@ -2003,7 +2004,7 @@
     </g>
     <g
        id="g1429"
-       transform="matrix(1,0,0,-1,49.220485,-6.8167372)">
+       transform="matrix(1,0,0,-1,1185.2205,-110.81674)">
       <g
          transform="translate(-519.16274,-610.38504)"
          id="g5131-3">
@@ -2357,7 +2358,7 @@
     </g>
     <g
        id="g1491"
-       transform="matrix(1,0,0,-1,-766.5026,266.05506)">
+       transform="matrix(1,0,0,-1,369.4974,162.05505)">
       <g
          id="g4800-0-1-6-9"
          transform="translate(-288.05248,-75.42423)">
@@ -2711,7 +2712,7 @@
     </g>
     <g
        id="g1367"
-       transform="translate(-222.61858,404.59588)">
+       transform="translate(913.38142,300.59587)">
       <g
          transform="matrix(1,0,0,-1,-521.46683,198.97245)"
          id="g5131-1-4">
@@ -3059,7 +3060,7 @@
     </g>
     <g
        id="g2666"
-       transform="matrix(0,1,1,0,91.183437,26.794862)">
+       transform="matrix(0,1,1,0,1227.1834,-77.205138)">
       <g
          transform="rotate(-90,179.03168,283.78486)"
          id="g2576">
@@ -3398,7 +3399,7 @@
       </g>
     </g>
     <g
-       transform="matrix(1,0,0,-1,-222.61858,-4.0958276)"
+       transform="matrix(1,0,0,-1,913.38142,-108.09583)"
        id="g2784">
       <g
          id="g2718"
@@ -3747,7 +3748,7 @@
     </g>
     <g
        id="g2952"
-       transform="translate(-8,-54.373367)">
+       transform="translate(1128,-158.37338)">
       <rect
          ry="3.1183035"
          style="fill:#800000;stroke-width:0.26458332"
@@ -3769,7 +3770,7 @@
          transform="scale(-1)" />
     </g>
     <g
-       transform="matrix(-1,0,0,1,174.82175,-149.08807)"
+       transform="matrix(-1,0,0,1,1310.8218,-253.08808)"
        id="g2862-6">
       <g
          id="g1852-6-2"
@@ -3792,42 +3793,49 @@
     </g>
     <text
        id="text2964"
-       y="74.33091"
-       x="54.862"
+       y="-29.66909"
+       x="1190.8621"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="stroke-width:0.26458332"
-         y="74.33091"
-         x="54.862"
+         y="-29.66909"
+         x="1190.8621"
          id="tspan2962"
          sodipodi:role="line">Bloc roue </tspan><tspan
          style="stroke-width:0.26458332"
-         y="87.560074"
-         x="54.862"
+         y="-16.439924"
+         x="1190.8621"
          sodipodi:role="line"
          id="tspan2966">codeuse</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-193.2317"
-       y="183.85014"
+       x="-89.231697"
+       y="1319.8501"
        id="text2972"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
-         x="-193.2317"
-         y="183.85014"
+         x="-89.231697"
+         y="1319.8501"
          style="stroke-width:0.26458332"
          id="tspan2976">Roue d'entrainement</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="69.129723"
-       y="267.91971"
+       x="1205.1298"
+       y="163.91972"
        id="text2984"><tspan
          id="tspan2982"
          sodipodi:role="line"
-         x="69.129723"
-         y="267.91971"
+         x="1205.1298"
+         y="163.91972"
          style="stroke-width:0.26458332">Bloc renvoi d'angle</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#494949;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect5164"
+       width="328.61249"
+       height="300.56665"
+       x="1131.6937"
+       y="-78.06665" />
   </g>
 </svg>
