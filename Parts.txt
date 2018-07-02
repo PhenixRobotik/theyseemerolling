@@ -1,0 +1,9 @@
+roues: https://www.robotshop.com/eu/fr/rb-ban-91-roue-orange.html#description
+largeur 10.16mm diamètre 60,325
+accouplements: https://www.robotshop.com/eu/fr/moyeu-hex-6mm-1l.html
+
+roulements; https://fr.rs-online.com/web/p/roulements-a-billes/8937436/
+int 6mm ext 19mm largeur 6mm (standard)
+axe 6mm https://fr.rs-online.com/web/p/arbres-lineaires-et-rails/7243399/
+
+poulie https://www.tridistribution.fr/fr/poulies-dentee-ou-crantee/poulie-mxl025-aluminium.html
