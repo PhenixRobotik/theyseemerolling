@@ -1,0 +1,8 @@
+tige acier 15mm diam et 250 long
+
+roulements:
+int 12 ext 28 ep 8
+int 10 ext 26 ep 8
+
+poulies:
+
