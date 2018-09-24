@@ -1,8 +1,8 @@
 tige acier 15mm diam et 250 long
 
 roulements:
-int 12 ext 28 ep 8
-int 10 ext 26 ep 8
+688H
 
 poulies:
-
+tri distribution 44MXL025F
+                 24MXL025F
