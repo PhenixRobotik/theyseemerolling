@@ -2,6 +2,8 @@ tige acier 15mm diam et 250 long
 
 roulements:
 688H
+F682H
+F623ZZ
 
 poulies:
 tri distribution 44MXL025F
