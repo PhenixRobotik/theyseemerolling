@@ -1,58 +1,59 @@
 $fn=100;
 include <manchons_common.scad>;
 
-L_entre_montants = 34.5;
-L_entre_encoches = 25.0;
-L_encoche_left = L_entre_montants - 29.5;
-L_encoche_right = L_entre_montants - 30;
+// setup
+brackets_distance = 34.5;
+slots_distance = 25.25;
 
-echo(L_entre_encoches + L_encoche_left + L_encoche_right);
+slots_shift_to_right = 0.25;
 
+// computed
+slot_left_position  = slots_distance/2 - slots_shift_to_right;
+slot_right_position = slots_distance/2 + slots_shift_to_right;
+
+slot_left_length  = brackets_distance/2 - slot_left_position;
+slot_right_length = brackets_distance/2 - slot_right_position;
+
+echo(slot_left_length);
+echo(slot_right_length);
 
 module axis() {
-    rotate([-90,0,0])
     difference() {
-        half_chamfered_cylinder(d=Daxis, h=L_entre_montants, center=true);
+        half_chamfered_cylinder(d=Daxis, h=brackets_distance+0.01, center=true);
         // axis slots
         difference() {
             union() {
-                translate([0, 0, L_entre_montants/2 - L_encoche_right])
-                half_chamfered_cylinder(h=L_encoche_right+0.01, d=Daxis+1);
-                translate([0, 0, -L_entre_montants/2-0.01])
-                half_chamfered_cylinder(h=L_encoche_left+0.01, d=Daxis+1);
+                mirror([0,1])
+                translate([0, slot_right_position])
+                half_chamfered_cylinder(h=slot_right_length, d=Daxis+1);
+                translate([0, slot_left_position])
+                half_chamfered_cylinder(h=slot_left_length, d=Daxis+1);
             }
-            half_chamfered_cylinder(h=100,      d=Dmin, center=true);
+            half_chamfered_cylinder(h=100, d=Dmin, center=true);
         }
     }
 }
 
 module manchon_roue() {
+    screws_pos =  (brackets_distance-Dflat)/2;
     difference() { // central hole
         union() {
-            tube(length = L_entre_montants, center=true);
+            tubeA(length = brackets_distance, center=true);
 
-            translate([0,  (L_entre_montants-0.001-Dflat)/2, 0]) screw_holder();
-            translate([0, -(L_entre_montants-0.001-Dflat)/2, 0]) screw_holder();
+            translate([0,  screws_pos, 0]) screw_holder("L");
+            translate([0, -screws_pos, 0]) screw_holder("R");
         }
         union() {
-            //central hole
+            // central hole
             axis();
-
-            translate([0,  (L_entre_montants-Dflat)/2, 0]) screws();
-            translate([0, -(L_entre_montants-Dflat)/2, 0]) screws();
-
-            translate([0, +14,-(Daxis/2+ep)]) linear_extrude(height = 0.2) rotate([180, 0, -90])
-                text("L",
-                font = "Liberation Sans:style=Bold", size = 2.5, valign="center", halign="center");
-
-            translate([0, -14,-(Daxis/2+ep)]) linear_extrude(height = 0.2) rotate([180, 0, -90])
-                text("R",
-                font = "Liberation Sans:style=Bold", size = 2.5, valign="center", halign="center");
-
-            //cuts the cylinder in 2
+            // Screws
+            translate([0,  screws_pos, 0]) screws();
+            translate([0, -screws_pos, 0]) screws();
+            // cuts the cylinder in 2
             translate([0, 0, 50-0.5]) cube(size=[100, 100, 100],center=true);
         }
     }
 }
 
 manchon_roue();
+// %translate([0, -slots_shift_to_right, 0]) cube([100, slots_distance, 100], center=true);
