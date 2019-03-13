@@ -43,8 +43,8 @@ module manchon_roue() {
 }
 
 module manchon_simple() {
-    d_out = Daxis+0.6;
-    d_contact = Daxis+1.5;
+    d_out = Daxis+1.5;
+    d_contact = Daxis+1.9;
     difference() {
         union() {
             cylinder(d=d_out, h=wheel_pos);
@@ -52,7 +52,7 @@ module manchon_simple() {
                 cylinder(d1=d_contact, d2=d_out, h=2);
         }
         translate([0,0,-0.1])
-        cylinder(d=Daxis, h=wheel_pos+0.2);
+        cylinder(d=Daxis+0.7, h=wheel_pos+0.2);
     }
 }
 

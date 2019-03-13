@@ -3,8 +3,8 @@ Dmin = 6; // diametre dans l'encoche
 
 ep = 1.8; // epaisseur du manchon
 
-Dholes = 2.5; // diametre des trous de fixation
-Dflat = Dholes*2; // longueur plate a cote des trous
+Dholes = 3; // diametre des trous de fixation
+Dflat = 7; // longueur plate a cote des trous
 
 module half_chamfered_cylinder(d=1, h=1, center=false) {
     rotate([-90,0,0])
@@ -20,7 +20,7 @@ module half_chamfered_cylinder(d=1, h=1, center=false) {
 
 module screw_holder(letter = "") {
     difference() {
-        cube(size=[Daxis*2.5, Dflat, Daxis + 2*ep], center=true);
+        cube(size=[22, Dflat, Daxis + 2*ep], center=true);
 
         translate([Daxis*2.5/2 - 0.5, 0, -(Daxis/2+ep+1/2)/2])
             rotate([90,0,90])
@@ -28,10 +28,14 @@ module screw_holder(letter = "") {
                 font = "Liberation Sans:style=Bold", size = 2.5, letter);
     }
 }
-module screws() {
+module screws(nut=false) {
     for (i=[0:1]) mirror([i, 0, 0]) {
         translate([Daxis*0.9, 0, 0])
             cylinder(h=Daxis*4, d=Dholes, center=true);
+        if(nut)
+            translate([Daxis*0.9, 0, -Daxis*2])
+                cylinder(h=1.2, d=5, center=true, $fn=6);
+        
     }
 }
 module tubeA(length=0, center=true) {

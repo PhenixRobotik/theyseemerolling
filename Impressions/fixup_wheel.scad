@@ -3,13 +3,13 @@ $fn=200;
 function in(inches) = inches *25.4;
 
 height_bottom = (in(0.3) - in(0.15))/2 + 0.5;
-diam_in1 = in(0.8)+0.6;
-diam_in2 = 22+0.6;
+diam_in1 = in(0.8)+1.6;
+diam_in2 = 22+0.6+1;
 
 diam_pos_screw = 10.75;
-diam_screw = 4;
+diam_screw = 6;
 
-diam_pulley_out = 32;
+diam_pulley_out = 31.5;
 
 module fixup_wheel(height=0, diam_in=0, diam_out=30) {
     difference() {
@@ -40,13 +40,13 @@ module fixup_pulley() {
     difference() {
         cylinder(h=height_fixup_pulley,   d=diam_pulley_out + 2.5);
         translate([0,0,-1])
-        cylinder(h=height_fixup_pulley+2, d=diam_pulley_out+0.5);
+        cylinder(h=height_fixup_pulley+2, d=diam_pulley_out + 0.5);
     }
 }
 
 // fixup_wheel(height = 0.5,           diam_in = 15);
-fixup_wheel(height = 10-in(0.3),    diam_in = 16.5, diam_out = diam_pulley_out);
-translate([0,0,1.5]) #fixup_pulley();
+fixup_wheel(height = 10-in(0.3)-0.6,    diam_in = 16.2, diam_out = diam_pulley_out);
+//translate([0,0,1.5]) #fixup_pulley();
 
 
 
