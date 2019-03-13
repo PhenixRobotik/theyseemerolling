@@ -6,7 +6,7 @@ wheel_pos = 23.75;
 // Left side
 letter = "L";
 slot_position = 5.5;
-slot_length = 5.5;
+slot_length = 5.1;
 
 // Right side
 // letter = "R";
@@ -15,7 +15,7 @@ slot_length = 5.5;
 
 
 module axis() {
-    difference() {
+    #difference() {
         half_chamfered_cylinder(h=100, d=Daxis, center=true);
         // axis slot
         difference() {
@@ -42,6 +42,20 @@ module manchon_roue() {
     }
 }
 
-manchon_roue();
+module manchon_simple() {
+    d_out = Daxis+0.6;
+    d_contact = Daxis+1.5;
+    difference() {
+        union() {
+            cylinder(d=d_out, h=wheel_pos);
+            for (i=[0,1]) translate([0, 0, i*wheel_pos]) mirror([0,0,i])
+                cylinder(d1=d_contact, d2=d_out, h=2);
+        }
+        translate([0,0,-0.1])
+        cylinder(d=Daxis, h=wheel_pos+0.2);
+    }
+}
 
-%rotate([90, 0,0])cylinder(d=10, h=1000, center=true);
+// manchon_roue();
+manchon_simple();
+// %rotate([90, 0,0])cylinder(d=10, h=1000, center=true);
