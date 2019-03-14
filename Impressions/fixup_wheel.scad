@@ -11,7 +11,20 @@ diam_screw = 6;
 
 diam_pulley_out = 31.5;
 
-module fixup_wheel(height=0, diam_in=0, diam_out=30) {
+
+screws_positions_left = [
+    [  0, 10.75],
+    [120, 11.50],
+    [235, 10.75],
+];
+screws_positions_right = [
+    [  0, 10.75],
+    [120, 11.00],
+    [235, 11.25],
+];
+
+
+module fixup_wheel(height=0, diam_in=0, diam_out=30, screws_positions) {
     difference() {
         union() {
             cylinder(d=diam_out, h=height_bottom);
@@ -28,8 +41,10 @@ module fixup_wheel(height=0, diam_in=0, diam_out=30) {
             cylinder(d=diam_in, h=10);
             
             // Screws
-            for(i=[0:2]) rotate([0,0,120*i]) {
-                translate([diam_pos_screw, 0, 0]) cylinder(center=true, d=diam_screw, h=20);
+            for(i=[0:2])
+            rotate([0, 0, screws_positions[i][0]])
+            translate([screws_positions[i][1], 0, 0]) {
+                cylinder(center=true, d=diam_screw, h=20);
             }
         }
     }
@@ -45,12 +60,12 @@ module fixup_pulley() {
 }
 
 // fixup_wheel(height = 0.5,           diam_in = 15);
-fixup_wheel(height = 10-in(0.3)-0.6,    diam_in = 16.2, diam_out = diam_pulley_out);
-//translate([0,0,1.5]) #fixup_pulley();
 
+fixup_wheel(
+    height = 10-in(0.3)-0.6,
+    diam_in = 16.2,
+    diam_out = diam_pulley_out,
+    screws_positions = screws_positions_right
+);
 
-
-
-
-
-
+translate([0,0,1.5]) #fixup_pulley();
