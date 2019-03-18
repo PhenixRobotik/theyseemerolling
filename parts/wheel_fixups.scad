@@ -2,7 +2,11 @@ $fn=200;
 
 function in(inches) = inches *25.4;
 
-height_bottom = (in(0.3) - in(0.15))/2 + 0.25;
+height_bottom = (in(0.3) - in(0.15))/2;
+height_pulley = 10-in(0.3)-0.0;
+height_out = 1.1;
+
+diam_bearing = 16.2;
 diam_in1 = in(0.8)+0.6;
 diam_in2 = 22+0.6+0;
 
@@ -10,7 +14,6 @@ diam_pos_screw = 10.75;
 diam_screw = 4.2;
 
 diam_pulley_out = 31.5;
-
 
 screws_positions_left = [
     [  0, 10.75],
@@ -24,7 +27,11 @@ screws_positions_right = [
 ];
 
 
-module fixup_wheel(height=0, diam_in=0, diam_out=30, screws_positions) {
+module fixup_wheel(
+    height=0,
+    diam_in=diam_bearing,
+    diam_out=diam_pulley_out,
+    screws_positions) {
     translate([0,0,height_bottom + height])
     rotate([180,0])
     difference() {
@@ -36,14 +43,14 @@ module fixup_wheel(height=0, diam_in=0, diam_out=30, screws_positions) {
         }
         union() {
             // Wheel
-            translate([0,0,-0.001])
+            translate([0,0,-0.005])
             cylinder(d1=diam_in2, d2=diam_in1, h=height_bottom+0.002);
             
             // Bearing
             cylinder(d=diam_in, h=10);
 
             // zero index
-            rotate([0, 0, screws_positions[0][0]+15])
+            rotate([0, 0, screws_positions[0][0]+25])
             translate([11.7,0,-0.01])
             cylinder(d=2);
             
@@ -70,37 +77,29 @@ module fixup_pulley_ring() {
 }
 module fixup_pulley_left() {
     fixup_wheel(
-        height = 10-in(0.3)-0.8,
-        diam_in = 16.2,
-        diam_out = diam_pulley_out,
+        height = height_pulley,
         screws_positions = screws_positions_left
     );
 }
 module fixup_pulley_right() {
     fixup_wheel(
-        height = 10-in(0.3)-0.8,
-        diam_in = 16.2,
-        diam_out = diam_pulley_out,
+        height = height_pulley,
         screws_positions = screws_positions_right
     );
 }
 
 module fixup_out_left() {
     mirror([0,0,1])fixup_wheel(
-        height = 9.5-in(0.3)-0.8,
-        diam_in = 16.2,
-        diam_out = diam_pulley_out,
+        height = height_out,
         screws_positions = screws_positions_left
     );
 }
 module fixup_out_right() {
     mirror([0,0,1])fixup_wheel(
-        height = 9.5-in(0.3)-0.8,
-        diam_in = 16.2,
-        diam_out = diam_pulley_out,
+        height = height_out,
         screws_positions = screws_positions_right
     );
 }
 
 
-fixup_out_left();
+fixup_pulley_right();
