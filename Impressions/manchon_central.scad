@@ -47,8 +47,8 @@ module manchon_roue() {
             // central hole
             axis();
             // Screws
-            translate([0,  screws_pos, 10.7]) screws(nut=true);
-            translate([0, -screws_pos, 10.7]) screws(nut=true);
+            translate([0,  screws_pos, 0]) screws();
+            translate([0, -screws_pos, 0]) screws();
             // cuts the cylinder in 2
             translate([0, 0, 50-0.5]) cube(size=[100, 100, 100],center=true);
         }
