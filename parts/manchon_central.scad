@@ -1,5 +1,5 @@
 $fn=100;
-include <manchons_common.scad>;
+include <manchon_common.scad>;
 
 // setup
 brackets_distance = 34.5;
