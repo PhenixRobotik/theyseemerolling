@@ -1,5 +1,6 @@
 $fn=100;
 
+include <arc.scad>;
 
 // Dimensions joint torique
 joint_diam_ext = 60;
@@ -25,6 +26,7 @@ module support() {
 }
 
 
+
 module trous () {
     nb_trous = 5;
     hole_h = roue_epaisseur + 1;
@@ -32,19 +34,32 @@ module trous () {
     hole_do = joint_diam_int - 12;
     hole_dc = 3;
     
-    minkowski() {
-        translate([0,0,-hole_h/2])
-        difference() {
-            cylinder(d=hole_do, h=hole_h);
-            union() {
-                cylinder(d=hole_di, h=hole_h);
-                for (i=[0:nb_trous]) rotate([0,0,360*i/nb_trous]) {
-                    translate([-4, -5, 0]) cube([8, 100, hole_h]);
-                }
-            }
-        }
-        cylinder(d=hole_dc);
+    translate([0,0,-hole_h/2])
+    difference() {
+        for (i=[0:nb_trous]) rotate([0,0,i*360/nb_trous])
+            trou(nb_trous);
+        cylinder(d=hole_di*0.84, h=hole_h);
     }
+}
+module trou(nb_trous) {
+    hole_h = roue_epaisseur + 1;
+    hole_di = 15;
+    hole_do = joint_diam_int - 10;
+    hole_dc = 3;
+    offset = -hole_dc/2-2.5;
+    
+    hull() {
+        translate([hole_di/2+hole_dc/2, offset]) cylinder(d=hole_dc, h=hole_h);
+        translate([hole_do/2-hole_dc/2, offset]) cylinder(d=hole_dc, h=hole_h);
+        
+        rotate([0,0,-360/nb_trous]) {
+        translate([hole_di/2+hole_dc/2, -offset]) cylinder(d=hole_dc, h=hole_h);
+        translate([hole_do/2-hole_dc/2, -offset]) cylinder(d=hole_dc, h=hole_h);
+        }
+    }
+    // I could do theorical computing… or brute-force the position
+    rotate([0,0,-360/nb_trous*0.9])
+    arc(hole_do/2-5, hole_do/2+0.395, hole_h, 360/nb_trous*0.7, $fn=100);
 }
 
 module roue_codeuse() {
@@ -65,7 +80,7 @@ module roue_codeuse() {
             
         } union() {
             axis();
-            joint();
+            // joint();
             trous();
         }
     }
