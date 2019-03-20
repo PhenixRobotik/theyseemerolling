@@ -9,8 +9,8 @@ joint_diam_int = joint_diam_ext - 2 * joint_epaisseur;
 joint_diam_mid = (joint_diam_ext + joint_diam_int) / 2;
 
 // Dimensions roue
-roue_diam_axis = 2;
-roue_epaisseur = 6.5;
+roue_diam_axis = 1.5;
+roue_epaisseur = 5.5;
 
 module joint() {
     rotate_extrude(convexity = 10)
@@ -80,7 +80,7 @@ module roue_codeuse() {
             
         } union() {
             axis();
-            // joint();
+            joint();
             trous();
         }
     }
