@@ -10,7 +10,7 @@ joint_diam_mid = (joint_diam_ext + joint_diam_int) / 2;
 
 // Dimensions roue
 roue_diam_axis = 1.5;
-roue_epaisseur = 5.5;
+roue_epaisseur = 5;
 
 module joint() {
     rotate_extrude(convexity = 10)
@@ -24,7 +24,6 @@ module support() {
     for (i=[0:1]) mirror([0,0,i])%
         translate([-5, -5, roue_epaisseur / 2]) cube([10, 100, 3]);
 }
-
 
 
 module trous () {
@@ -65,16 +64,19 @@ module trou(nb_trous) {
 module roue_codeuse() {
     difference() {
         union() {
-            h_mid = joint_epaisseur - 0.5;
+            h_mid = joint_epaisseur - 1;
             cylinder(d=joint_diam_mid, h=h_mid, center=true);
             
             h_ext = (roue_epaisseur - h_mid) / 2;
 
+            d1p = 0.6;
+            d1 = joint_diam_ext * d1p + joint_diam_int * (1-d1p);
+
             for (i=[0:1]) mirror([0,0,i])
             translate([0, 0, h_mid/2])
             cylinder(
-                d1 = joint_diam_mid,
-                d2 = joint_diam_mid - h_ext*2,
+                d1 = d1,
+                d2 = d1- h_ext*1.2,
                 h  = h_ext
             );
             
@@ -85,7 +87,18 @@ module roue_codeuse() {
         }
     }
 }
+
+module half_roue_codeuse() {
+    intersection() {
+        roue_codeuse();
+        translate([-joint_diam_ext/2, -joint_diam_ext/2, -roue_epaisseur-0.2])
+        cube([joint_diam_ext, joint_diam_ext, roue_epaisseur]);
+    }
+}
 // support();
 roue_codeuse();
 // trous();
-%joint();
+// %joint();
+
+
+
