@@ -1,0 +1,10 @@
+1x battery_floor
+1x plexi_floor
+1x roof
+1x servo_floor
+
+4x side-200
+8x side-200-cover
+
+4x side-298
+8x side-298-cover
