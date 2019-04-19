@@ -4,8 +4,8 @@ include <arc.scad>;
 
 // Dimensions joint torique
 joint_diam_ext = 60;
-joint_epaisseur= 3;
-joint_diam_int = joint_diam_ext - 2 * joint_epaisseur;
+joint_diam_int = 55;
+joint_epaisseur= (joint_diam_ext - joint_diam_int) / 2;
 joint_diam_mid = (joint_diam_ext + joint_diam_int) / 2;
 
 // Dimensions roue
