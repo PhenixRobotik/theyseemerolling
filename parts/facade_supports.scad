@@ -1,12 +1,12 @@
 $fn=100;
 
 
-plaque_t = 4;
+plaque_t = 3.3;
 plaque_h = 50;
 plaque_l = 200;
 
-banana_d = 5;
-banana_spacing = 12;
+banana_d = 12;
+banana_spacing = 18;
 
 switch_l = 29.5;
 switch_w = 21.5;
@@ -16,9 +16,7 @@ screws_toborder = 5;
 screws_pos = [ 
     [           screws_toborder,            screws_toborder],
     [           screws_toborder, plaque_h - screws_toborder],
-    
-    [plaque_l / 2,               plaque_h - screws_toborder],
-    
+
     [plaque_l - screws_toborder,            screws_toborder],
     [plaque_l - screws_toborder, plaque_h - screws_toborder],
 ];
@@ -77,6 +75,5 @@ module plaque() {
 
 plaque();
 
-%translate([10,  plaque_h/2-10,  -10]) cube([180, 10, 10]);
 %translate([0,   -71+plaque_h/2, -10]) cube([10,  71, 10]);
 %translate([190, -71+plaque_h/2, -10]) cube([10,  71, 10]);
