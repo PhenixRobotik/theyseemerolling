@@ -5,7 +5,7 @@ plaque_t = 3.3;
 plaque_h = 50;
 plaque_l = 200;
 
-banana_d = 12;
+banana_d = 13;
 banana_spacing = 18;
 
 switch_l = 29.5;
@@ -75,5 +75,5 @@ module plaque() {
 
 plaque();
 
-%translate([0,   -71+plaque_h/2, -10]) cube([10,  71, 10]);
-%translate([190, -71+plaque_h/2, -10]) cube([10,  71, 10]);
+%translate([0,   -71+plaque_h/2, plaque_t]) cube([10,  71, 10]);
+%translate([190, -71+plaque_h/2, plaque_t]) cube([10,  71, 10]);
