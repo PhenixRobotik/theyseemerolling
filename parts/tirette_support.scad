@@ -26,7 +26,7 @@ bumper_contacts_h = [
 ];
 
 
-opened = abs($t*2-1);
+// opened = abs($t*2-1);
 opened = 1;
 
 tirette_thick = 1.6;
