@@ -1,5 +1,7 @@
 $fn=100;
 
+mode = 1;
+
 hole_d = 14.85;
 hole_h = 3;
 
@@ -52,17 +54,18 @@ module bumper_screws() {
         }
     }
 }
+
 module bumper() {
     difference() {
         translate([bumper_pos, -bumper_y/2, -bumper_h-1])
         union() {
             cube([bumper_x_pushed, bumper_y, bumper_h]);
-
+            
             translate([bumper_x_pushed, bumper_y *0.1, bumper_h-2])
             rotate([
-                0,
-                opened*asin((bumper_x_pushed-bumper_x_pulled)/bumper_l),
-            ])
+                0, 
+                opened*asin((bumper_x_pushed-bumper_x_pulled)/bumper_l), 
+            ]) 
             translate([-1,0, -bumper_l])
             cube([1, bumper_y *0.8, bumper_l]);
             for(h = bumper_contacts_h) {
@@ -73,6 +76,7 @@ module bumper() {
         bumper_screws();
     }
 }
+
 module plaque() {
     difference() {
         translate([0, 0, hole_h/2]) cube([80, 80, hole_h], center=true);
@@ -98,7 +102,7 @@ module tirette() {
             translate([0, 0, 15/2 + offset])
             rotate([0, 90, 0])
                 cylinder(d = 10, h = tirette_thick+1, center=true);
-
+            
         }
     }
 }
@@ -117,16 +121,16 @@ module support() {
                 cube([size, hole_d+2, bumper_h + 2]);
             translate([0, 0, -(bumper_h + 2)/2])
                 cylinder(d=hole_d+2, h=bumper_h + 2, center=true);
-
+            
             cylinder(d=hole_d, h=hole_h);
         }
         union() {
             bumper_screws();
-
+            
             // Bumper
             translate([bumper_pos+0.01, -bumper_y/2, -30])
                 cube([-bumper_pos, bumper_y, 30.01]);
-
+            
             // Tirette
             translate([-2+0.01, -bumper_y/2, -30])
                 cube([3, bumper_y, 50]);
@@ -137,10 +141,16 @@ module support() {
         }
     }
 }
-%negative_real();
-%tirette();
 
-intersection() {
+
+if (mode == 0) {
+    %negative_real();
+    %tirette();
     support();
-    // translate([-50, -50, -2]) #cube([100, 100, 100]);
-}
+} else if (mode == 1) {
+    rotate([0,90,0])
+    tirette();    
+} else if (mode == 2) {
+    support();
+} else  {}
+
